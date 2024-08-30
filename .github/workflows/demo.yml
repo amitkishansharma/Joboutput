@@ -50,7 +50,9 @@ jobs:
         with:
             name: dist-files   
       - name: output File name
-        run: echo "${{ needs.build.outputs.script-file }}"      
+        run: echo "${{ needs.build.outputs.script-file }}"     
+      - name: output CSS File name
+        run: echo "${{ needs.build.outputs.out-file2 }}"           
       - name: show content
         run: ls      
       - name: Deploy
