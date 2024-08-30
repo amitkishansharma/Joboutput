@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       script-file: ${{ steps.publish.outputs.java-script-file }}
-      scc-file: ${{ steps.publish-css.output.css-file}}
+      scc-file: ${{ steps.publish-css.output.css-file }}
     steps:
       - name: Get code
         uses: actions/checkout@v3
