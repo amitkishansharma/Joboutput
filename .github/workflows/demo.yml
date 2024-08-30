@@ -38,9 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download contents
-      - uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
-          name: dist-file
+            name: dist-file   
       - name: show content
         run: ls      
       - name: Deploy
