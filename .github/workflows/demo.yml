@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       script-file: ${{ steps.publish.outputs.java-script-file }}
+      scc-file: ${{ steps.publish-css.output.css-file}}
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -30,6 +31,9 @@ jobs:
       - name: Publish the JS file name
         id: publish
         run: find dist/assets/*.js -type f -execdir echo 'java-script-file={}' >>$GITHUB_OUTPUT ';'  
+      -name: publish CSS file name
+        id: publish-css
+        run: find dist/assets/*.css -type f -execdir echo 'css-file={}' >>$GITHUB_OUTPUT ';'  
       - name: upload artifacts
         uses: actions/upload-artifact@v4
         with: 
