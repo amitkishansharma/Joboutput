@@ -79,4 +79,4 @@ jobs:
       - name: show-env-variables
         run: |
           echo "Test var 1 ${{ env.TESTVAR1 }}"
-          echo "Test var 1 ${{ env }}"
+          echo "Git hub Repo $GITHUB_REPOSITORY "
