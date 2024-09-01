@@ -80,3 +80,4 @@ jobs:
         run: |
           echo "Test var 1 ${{ env.TESTVAR1 }}"
           echo "Git hub Repo $GITHUB_REPOSITORY "
+          echo " ${{ secrets.SECOND_SECRET }} "
