@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+  workworkflow_dispatch:
+        
 env:
   TESTVAR1: FIRST-VAR        
 jobs:
